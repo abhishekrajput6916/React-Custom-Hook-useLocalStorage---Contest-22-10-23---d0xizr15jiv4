@@ -10,18 +10,11 @@ const useLocalStorage = (stateVar, value) => {
       return value;
     }
   });
-  function setLSState(valorfn) {
-    let newVal;
-    if (typeof valorfn === "function") {
-      const fn = valorfn;
-      newVal = fn(lsValue);
-    } else {
-      newVal = valorfn;
-    }
-    localStorage.setItem(key, JSON.stringify(newVal));
-    setLsValue(newVal);
+  function setLSState(val) {
+    localStorage.setItem(stateVar, JSON.stringify(val));
+    setLsValue(val);
   }
-  return [lsValue, setLsValue];
+  return [lsValue, setLSState];
 };
 
 export default useLocalStorage;
