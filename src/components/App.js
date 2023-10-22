@@ -8,7 +8,6 @@ const App = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     const text = inputRef.current.value;
-    console.log("hii");
     setState(text);
   };
 
@@ -19,8 +18,10 @@ const App = () => {
       <button id="set" onClick={submitHandler}>
         Set Value
       </button>
+      {state}
     </div>
   );
 };
 
 export default App;
+
