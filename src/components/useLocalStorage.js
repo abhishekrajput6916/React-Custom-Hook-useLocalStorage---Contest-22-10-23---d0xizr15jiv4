@@ -7,7 +7,7 @@ const useLocalStorage = (stateVar, value) => {
       return JSON.parse(value);
     } else {
       localStorage.setItem(stateVar, JSON.stringify(value));
-      return value;
+      return value;	
     }
   });
   function setLSState(val) {
