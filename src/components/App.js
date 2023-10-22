@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import useLocalStorage from "./useLocalStorage";
-
+import '../styles/App.css';
 const App = () => {
   const [state, setState] = useLocalStorage("key", null);
   const inputRef = useRef(null);
