@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import "../styles/App.css";
 import useLocalStorage from "./useLocalStorage";
 
 const App = () => {
@@ -9,6 +8,7 @@ const App = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     const text = inputRef.current.value;
+    console.log("hii");
     setState(text);
   };
 
